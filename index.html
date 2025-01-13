@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinque Footwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-black text-white px-4 md:px-6 py-4">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between gap-4">
+                <img src="img/logo.png" alt="Logo" class="h-8 w-8 md:h-10 md:w-10">
+                
+                <!-- Mobile Menu Button with checkbox hack -->
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+                <label for="menu-toggle" class="md:hidden cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-16 6h16"/>
+                    </svg>
+                </label>
+                
+                <!-- Mobile Navigation Menu -->
+                <div class="fixed inset-0 bg-black bg-opacity-95 -translate-x-full peer-checked:translate-x-0 md:hidden transition-transform duration-300 flex flex-col justify-center items-center space-y-8">
+                    <label for="menu-toggle" class="absolute top-4 right-4 text-3xl cursor-pointer">×</label>
+                    <a href="#" class="text-2xl hover:text-gray-300">Home</a>
+                    <a href="#" class="text-2xl hover:text-gray-300">About</a>
+                    <a href="#" class="text-2xl hover:text-gray-300">Contact</a>
+                    <a href="#" class="text-2xl hover:text-gray-300">Discover</a>
+                    <div class="flex flex-col space-y-4 items-center">
+                        <a href="#" class="hover:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                        </a>
+                        <button class="bg-white text-black px-8 py-2 rounded hover:bg-gray-200 transition-colors">Login</button>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="hover:text-gray-300">Home</a>
+                    <a href="#" class="hover:text-gray-300">About</a>
+                    <a href="#" class="hover:text-gray-300">Contact</a>
+                    <a href="#" class="hover:text-gray-300">Discover</a>
+                </div>
+                
+                <!-- Right Side Items (Desktop) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                    </a>
+                    <button class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition-colors">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[600px] flex items-center py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Left Content -->
+                <div class="text-white max-w-xl">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                        BLINQUE: Where Style Meets Comfort
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        Step into a world of sophistication with BLINQUE's exclusive footwear collection.
+                        From timeless classics to rare, trend-setting designs—find your perfect pair.
+                    </p>
+                    <button class="bg-white text-black px-8 py-3 rounded-md font-semibold hover:bg-gray-200 transition-transform hover:scale-105">
+                        Step Into Your Signature Essence
+                    </button>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+                    <img src="img/backround.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Sections -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">What Makes Us Unique</h2>
+                    <p class="text-lg">At Blinque, we prioritize comfort and style. Our shoes are designed with the latest technology to ensure that every step you take is a pleasure.</p>
+                </div>
+                <div class="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+                    <img src="img/shoe one.jpg" alt="Feature Image" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+                    <img src="img/our-story.webp" alt="Our Journey" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
+                    <p class="text-lg">The journey of Blinque began when four innovative minds came together to create comfortable shoes for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Cards -->
+                <div class="bg-black rounded-lg overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="img/shoe two.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Snickers</h3>
+                        <p class="text-lg">$49.99</p>
+                    </div>
+                </div>
+                <!-- Repeat similar structure for other products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div>
+                    <img src="img/logo.png" alt="Blinque Logo" class="h-12 w-12 mb-6">
+                    <p class="text-gray-400 mb-6">Redefining luxury footwear for every step you take.</p>
+                    <div class="flex space-x-4">
+                        <!-- Social Icons -->
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12V14.706H9.692v-3.622H12V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                            </svg>
+                        </a>
+                        <!-- Add other social icons similarly -->
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Customer Service</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Size Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="flex flex-col space-y-4">
+                        <input type="email" placeholder="Enter your email" class="bg-gray-800 rounded px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                        <button class="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-200 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-center text-gray-400">© 2025 BLINQUE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
